@@ -1,4 +1,8 @@
+import { useSelector } from 'react-redux';
+import { selectorCars } from 'store/selectors/selectors';
 export const App = () => {
+const cars = useSelector(selectorCars);
+console.log(cars)
   return (
     <div
       style={{
@@ -10,7 +14,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      Hello
     </div>
   );
 };
