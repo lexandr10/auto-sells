@@ -45,12 +45,6 @@ useEffect(() => {
   };
 }, [car._id, checkedFavorites, favorites, isShow])
   const distpatch = useDispatch();
-    const filteredDetails = {};
-    for (const key in reviews) {
-      if (reviews[key] > 0) {
-        filteredDetails[key] = reviews[key];
-      }
-    }
     const handlerAddCar = (evt) => {
       if(!checkedFavorites) {
         distpatch(addFavorites(car));
