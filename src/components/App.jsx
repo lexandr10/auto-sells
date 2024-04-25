@@ -1,20 +1,31 @@
-import { useSelector } from 'react-redux';
-import { selectorCars } from 'store/selectors/selectors';
+import { Suspense, lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+
+import Header from "./Header/Header";
+import DetailCar from "./DetailsCar/DetailCar";
+import Features from "./Features/Features";
+import Reviews from "./Reviews/Reviews";
+const HomePage = lazy(() => import('../page/HomePage'));
+const Catalog = lazy(() => import('../page/Catalog'));
+const Favorites = lazy(() => import('../page/Favorites'));
+
 export const App = () => {
-const cars = useSelector(selectorCars);
-console.log(cars)
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      Hello
-    </div>
+    <Suspense>
+      <Routes>
+      <Route path="/" element={<Header/>}>
+      <Route index element={<HomePage/>}/>
+      {/* <Route path="/details/:id" element={<DetailCar/>}>
+        <Route  index element={<Features/>}/>
+        <Route  path="reviews" element={<Reviews/>}/>
+      </Route> */}
+      <Route path="/favorites" element={<Favorites/>}/>
+      <Route path="/Catalog" element={<Catalog/>}/>
+      </Route>
+        </Routes>
+     
+    </Suspense>
+    
+    
   );
 };

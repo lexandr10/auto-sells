@@ -1,14 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { getCars, getMoreCars } from 'store/thunkCars/thunkCars';
-const carsSlice = createSlice({
-    name: 'cars',
-    initialState: {items: [], error: '', loading: false, limit: 8},
+import {createSlice}  from "@reduxjs/toolkit";
+import { getDetailtCar } from "store/thunkCars/thunkCars";
+
+const sliceDetailsCar = createSlice({
+    name: 'detailsCar',
+    initialState: {item: null, error: '', loading: false},
     extraReducers: builder => {
-      builder
-        .addCase(getCars.fulfilled, (state, { payload }) => {
-          return { ...state, items: payload};
-        }).addCase(getMoreCars.fulfilled, (state, { payload }) => {
-          return { ...state, items: [...state.items, ...payload], limit: state.limit + 4};
+        builder.addCase(getDetailtCar.fulfilled, (state, {payload}) => {
+            state.item = payload;
         }).addMatcher(
             action => action.type.endsWith('pending'),
             state => {
@@ -31,8 +29,6 @@ const carsSlice = createSlice({
               state.limit = 8
             }
           )
-    },
-
-
+    }
 })
-export const carsReducer = carsSlice.reducer;
+export const DetailsCarReducer = sliceDetailsCar.reducer;

@@ -1,0 +1,142 @@
+.itemCar {
+    display: flex;
+padding: 24px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+border-radius: 20px;
+border: 1px solid rgba(16, 24, 40, 0.20);
+
+background: #FFF;
+}
+.boxCard {
+    display: flex;
+width: 840px;
+align-items: flex-start;
+gap: 24px;
+}
+.imgCard {
+    width: 290px;
+height: 310px;
+flex-shrink: 0;
+border-radius: 10px;
+}
+.blockNamePrice {
+    display: flex;
+justify-content: center;
+align-items: flex-start;
+gap: 248px;
+align-self: stretch;
+}
+.blockPriceIcon {
+    display: flex;
+width: 158px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+.btnFavorites {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+.section {
+    display: flex;
+width: 526px;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+}
+.blockRatingReview {
+    display: flex;
+align-items: flex-start;
+gap: 16px;
+}
+.blockIconRating {
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 4px;
+}
+.IconLocation {
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 4px;
+}
+.decription {
+    display: -webkit-box;
+width: 525px;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+overflow: hidden;
+color: #475467;
+
+text-overflow: ellipsis;
+/* Main text */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+.details {
+    display: flex;
+flex-direction:row;
+flex-wrap: wrap;
+align-items: flex-start;
+gap: 8px;
+align-self: stretch;
+list-style: none;
+padding-left: 0;
+margin-bottom: 24px;
+}
+.itemDetails {
+    display: flex;
+padding: 12px 18px;
+align-items: center;
+gap: 8px;
+border-radius: 100px;
+background: #F2F4F7;
+
+mix-blend-mode: multiply;
+}
+.textDetails {
+    color: #101828;
+
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 125% */
+margin: 0;
+}
+
+
+.btnShowMore {
+
+    display: flex;
+    padding: 16px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 200px;
+background: #E44848;
+border: none;
+color: #FFF;
+
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+letter-spacing: -0.08px;
+cursor: pointer;
+}

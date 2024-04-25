@@ -1,0 +1,27 @@
+.linkNav {
+    display: flex;
+    padding: 6px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: inter;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 171.429% */
+color: var(--Text-black, #112230);
+}
+
+.navBlock {
+    display: flex;
+    align-items: center;
+justify-content: center;
+padding: 24px;
+gap: 32px;
+border-radius: 10px;
+background: var(--Inputs, #F6F6F6);
+
+}
