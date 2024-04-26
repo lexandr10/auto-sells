@@ -21,3 +21,17 @@ code {
 .hidden {
   overflow: hidden;
 }
+body::-webkit-scrollbar {
+  width: 8px;
+height: 264px;/* Ширина всего элемента навигации */
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff; /* Цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9; /* Цвет бегунка */
+  border-radius: 7px; /* Округление бегунка */
+  
+}

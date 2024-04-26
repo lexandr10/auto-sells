@@ -6,11 +6,11 @@ const { default: ListCar } = require("components/ListCars/ListCars")
 
 const HomePage = () => {
     return <>
-    <FilterForm/>
     <ListCar/>
     <Suspense>
         <Outlet/>
     </Suspense>
+    <FilterForm/>
     </>
     
 }

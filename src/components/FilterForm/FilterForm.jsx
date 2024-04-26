@@ -1,6 +1,6 @@
 const FilterForm = () => {
 return <form>
-<h2>Hello</h2>
+<h2>Filter form</h2>
 </form>
 }
 export default FilterForm;

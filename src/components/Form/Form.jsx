@@ -12,7 +12,6 @@ const Form = () => {
     const bookings = useSelector(selectorBookings);
     const distpatch = useDispatch();
     const handlerSubmit = (evt) => {
-evt.preventDefault();
 setName('');
 setEmail('');
 setDate('');
@@ -26,6 +25,7 @@ if(!result) {
         comment
     };
 distpatch(addBooks(book));
+alert(`You have successfully made your reservation on ${date}`);
 }else {
     return alert(`${date} is already busy`);
 }
@@ -57,9 +57,9 @@ distpatch(addBooks(book));
         <p className={css.text}>Stay connected! We are always ready to help you.</p>
         </div>
         <div className={css.contForm}>
-        <input className={css.input} value={name} name='name' onChange={handlerChange} placeholder="Name" pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$" type="text" />
-        <input className={css.input} value={email} name='email' onChange={handlerChange} placeholder="Email" type='email'/>
-        <input className={css.input} value={date} name='date' onChange={handlerChange} placeholder="Booking date" type='date'/>
+        <input required className={css.input} value={name} name='name' onChange={handlerChange} placeholder="Name" pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$" type="text" />
+        <input required className={css.input} value={email} name='email' onChange={handlerChange} placeholder="Email" type='email'/>
+        <input required className={css.input} value={date} name='date' onChange={handlerChange} placeholder="Booking date" type='date'/>
         <input className={css.inputComment} value={comment} name='comment' onChange={handlerChange} placeholder="Comment" type="text" />
         </div>
         

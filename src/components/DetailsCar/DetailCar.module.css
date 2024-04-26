@@ -133,7 +133,9 @@ align-self: stretch;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7); /* Затемненный цвет фона */
   z-index: 1000; /* Позиционирование над остальными элементами */
+  
 }
+
 .modal {
     position: fixed;
   top: 50%;
@@ -155,6 +157,26 @@ align-self: stretch;
   background: #FFF;
   
 }
+.modal::-webkit-scrollbar {
+    width: 8px;
+  height: 264px;/* Ширина всего элемента навигации */
+  position: absolute;
+  right: 16px;
+  top: 174px;
+  }
+  
+  .modal::-webkit-scrollbar-track {
+    background: #fff;
+    /* Цвет дорожки */
+    border-radius: 7px;
+
+  }
+  
+  .modal::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9; /* Цвет бегунка */
+    border-radius: 7px; /* Округление бегунка */
+    
+  }
 .btnClose {
     padding: 0;
     border: none;
