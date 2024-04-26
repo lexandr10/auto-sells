@@ -52,6 +52,7 @@ width: 526px;
 flex-direction: column;
 align-items: flex-start;
 gap: 8px;
+margin-bottom: 24px;
 }
 .blockRatingReview {
     display: flex;
@@ -77,6 +78,7 @@ width: 525px;
 -webkit-line-clamp: 1;
 overflow: hidden;
 color: #475467;
+margin-bottom: 24px;
 
 text-overflow: ellipsis;
 /* Main text */

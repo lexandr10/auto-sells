@@ -15,7 +15,6 @@ export const getMoreCars = createAsyncThunk('MoreCars', async (limit, thunkAPI) 
     try {
         const response = await axios.get('cars');
         const firstFourElements = response.data.slice(fromLimit, limit);
-        console.log(limit)
         return firstFourElements; 
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message);

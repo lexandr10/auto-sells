@@ -105,7 +105,7 @@ useEffect(() => {
         <p className={css.decription}>{description}</p>
         <ul className={css.details}> 
             { Object.keys(details).map(key => {
-    if (details[key] !== 0) {
+    if (details[key] !== 0 && details[key] !== '') {
       return <li className={css.itemDetails} key={key}>
         <AutomaticIcon/>
         <p className={css.textDetails}>{key}: {details[key]}</p>

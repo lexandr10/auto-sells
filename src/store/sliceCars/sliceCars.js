@@ -8,7 +8,8 @@ const carsSlice = createSlice({
         .addCase(getCars.fulfilled, (state, { payload }) => {
           return { ...state, items: payload};
         }).addCase(getMoreCars.fulfilled, (state, { payload }) => {
-          return { ...state, items: [...state.items, ...payload], limit: state.limit + 4};
+          state.limit = state.limit + 4;
+        state.items = [...state.items, ...payload];
         }).addMatcher(
             action => action.type.endsWith('pending'),
             state => {
@@ -28,7 +29,6 @@ const carsSlice = createSlice({
             state => {
               state.error = '';
               state.loading = false;
-              state.limit = 8
             }
           )
     },

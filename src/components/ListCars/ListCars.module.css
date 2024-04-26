@@ -10,6 +10,7 @@ margin-left: auto;
 margin-right: auto;
 background-color: #fff;
 cursor: pointer;
+margin-bottom: 44px;
 }
 .btnLoadMore:focus {
     border: 1px solid var(--Button, #E44848);
