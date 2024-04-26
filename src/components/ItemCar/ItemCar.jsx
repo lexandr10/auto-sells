@@ -111,7 +111,7 @@ useEffect(() => {
         <p className={css.textDetails}>{key}: {details[key]}</p>
         </li>;
     }
-    return null; // Если значение равно 0, пропустить элемент
+    return null; 
   })}
         </ul>
         
