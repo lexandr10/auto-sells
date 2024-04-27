@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/auto-sells/static/css/main.2de92989.css",
-    "main.js": "/auto-sells/static/js/main.1f05e2d4.js",
+    "main.js": "/auto-sells/static/js/main.ff26bba6.js",
     "static/css/265.f40fc0ac.chunk.css": "/auto-sells/static/css/265.f40fc0ac.chunk.css",
-    "static/js/265.818e1f8a.chunk.js": "/auto-sells/static/js/265.818e1f8a.chunk.js",
+    "static/js/265.9732fd95.chunk.js": "/auto-sells/static/js/265.9732fd95.chunk.js",
     "static/css/509.f40fc0ac.chunk.css": "/auto-sells/static/css/509.f40fc0ac.chunk.css",
-    "static/js/509.9427bb11.chunk.js": "/auto-sells/static/js/509.9427bb11.chunk.js",
+    "static/js/509.25440833.chunk.js": "/auto-sells/static/js/509.25440833.chunk.js",
     "static/css/107.24208948.chunk.css": "/auto-sells/static/css/107.24208948.chunk.css",
-    "static/js/107.caadebee.chunk.js": "/auto-sells/static/js/107.caadebee.chunk.js",
-    "static/js/43.933193b1.chunk.js": "/auto-sells/static/js/43.933193b1.chunk.js",
+    "static/js/107.29609ceb.chunk.js": "/auto-sells/static/js/107.29609ceb.chunk.js",
+    "static/js/317.3ac02813.chunk.js": "/auto-sells/static/js/317.3ac02813.chunk.js",
     "index.html": "/auto-sells/index.html",
     "main.2de92989.css.map": "/auto-sells/static/css/main.2de92989.css.map",
-    "main.1f05e2d4.js.map": "/auto-sells/static/js/main.1f05e2d4.js.map",
+    "main.ff26bba6.js.map": "/auto-sells/static/js/main.ff26bba6.js.map",
     "265.f40fc0ac.chunk.css.map": "/auto-sells/static/css/265.f40fc0ac.chunk.css.map",
-    "265.818e1f8a.chunk.js.map": "/auto-sells/static/js/265.818e1f8a.chunk.js.map",
+    "265.9732fd95.chunk.js.map": "/auto-sells/static/js/265.9732fd95.chunk.js.map",
     "509.f40fc0ac.chunk.css.map": "/auto-sells/static/css/509.f40fc0ac.chunk.css.map",
-    "509.9427bb11.chunk.js.map": "/auto-sells/static/js/509.9427bb11.chunk.js.map",
+    "509.25440833.chunk.js.map": "/auto-sells/static/js/509.25440833.chunk.js.map",
     "107.24208948.chunk.css.map": "/auto-sells/static/css/107.24208948.chunk.css.map",
-    "107.caadebee.chunk.js.map": "/auto-sells/static/js/107.caadebee.chunk.js.map",
-    "43.933193b1.chunk.js.map": "/auto-sells/static/js/43.933193b1.chunk.js.map"
+    "107.29609ceb.chunk.js.map": "/auto-sells/static/js/107.29609ceb.chunk.js.map",
+    "317.3ac02813.chunk.js.map": "/auto-sells/static/js/317.3ac02813.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2de92989.css",
-    "static/js/main.1f05e2d4.js"
+    "static/js/main.ff26bba6.js"
   ]
 }
