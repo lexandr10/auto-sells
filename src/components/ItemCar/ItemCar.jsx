@@ -2,9 +2,10 @@ import {LocationIcon,  RatingIcon, AutomaticIcon } from "components/Sprite/Sprit
 import { useDispatch, useSelector } from "react-redux";
 import { addFavorites, deleteFavorites } from "../../store/sliceFavorites/sliceFavorites";
 import css from "./ItemCar.module.css";
-import { selectorFavorites } from "store/selectors/selectors";
+import { selectorFavorites, selectorLoader } from "store/selectors/selectors";
 import { useEffect, useState } from "react";
 import DetailCar from "components/DetailsCar/DetailCar";
+import { Loader } from "components/Loader/Loader";
 
 
 const ItemCar = ({id, name,gallery,  reviews, details, price, rating, location, description, car}) => {
@@ -12,6 +13,7 @@ const favorites = useSelector(selectorFavorites);
 const [fill, setFill] = useState();
 const [stroke, setStroke] = useState();
 const [isShow, setIsShow] = useState(false);
+const loading = useSelector(selectorLoader)
 const checkedFavorites = favorites.some(item => item._id === car._id);
 
 const handleEscKeyPress = (e) => {
@@ -23,6 +25,7 @@ const handleEscKeyPress = (e) => {
 
 
 const toogleModal = (evt) => {
+  if(evt.target !== evt.currentTarget) setIsShow(false)
 setIsShow(!isShow);
 }
 useEffect(() => {
@@ -120,7 +123,7 @@ useEffect(() => {
     </div>
    
         
-          
+          {loading && <Loader/>}
            { isShow && <DetailCar toogleModal={toogleModal} id={id}/>}
         
     </li>

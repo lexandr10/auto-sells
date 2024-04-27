@@ -16,6 +16,8 @@ const DetailCar = ({id, toogleModal}) => {
     const features = useRef();
     const reviews = useRef();
     
+   
+
     useEffect(() => {
         const chageColor = () => {
             if(showFeatures) {
@@ -44,7 +46,7 @@ const handlerReviews = () => {
     <div className={css.modal}>
         
         {detailsCar && <div >
-    <div className={css.blockName}>
+    <div  className={css.blockName}>
         <h2 className={css.mainTitle}>{detailsCar.name}</h2>
         <button onClick={toogleModal} className={css.btnClose}>
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">

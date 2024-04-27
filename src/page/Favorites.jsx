@@ -1,5 +1,4 @@
 import ItemCar from "components/ItemCar/ItemCar";
-import { HeartIcon } from "components/Sprite/Sprite";
 import {  useSelector } from "react-redux";
 import { selectorFavorites } from "store/selectors/selectors";
 

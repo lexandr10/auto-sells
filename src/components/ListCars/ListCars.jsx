@@ -1,26 +1,28 @@
 import ItemCar from "components/ItemCar/ItemCar";
-import { useEffect, } from "react";
+import { useEffect, useState, } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectorCars, selectorLimit } from "store/selectors/selectors";
+import { selectorCars,   } from "store/selectors/selectors";
 import { getCars, getMoreCars } from "store/thunkCars/thunkCars";
 import css from './ListCars.module.css'
 
  const ListCar = () => {
 const cars = useSelector(selectorCars);
-const limit = useSelector(selectorLimit);
+const [page, setPage] = useState(1)
 const distpatch = useDispatch();
-console.log(limit)
+const hasMoreItems = cars.length % page === 0;
 useEffect(() => {
     distpatch(getCars());
 }, [distpatch])
 const handlerLoadMore = () => {
-  distpatch(getMoreCars(limit))
+  setPage(prev => prev + 1);
+  distpatch(getMoreCars(page + 1))
+  
 }
     return (
       <ul className={css.listCarsItems}>
         {cars.length > 0 && cars.map((car) => <ItemCar car={car}
         gallery={car.gallery} details={car.details} reviews={car.reviews} price={car.price} rating={car.rating} location={car.location} description={car.description} id={car._id} name={car.name}/> )}
-          <button className={css.btnLoadMore} onClick={handlerLoadMore} type="button">Load more...</button>
+          {hasMoreItems  && <button className={css.btnLoadMore} onClick={handlerLoadMore} type="button">Load more...</button>}
         </ul>
     );
   };

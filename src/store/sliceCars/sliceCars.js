@@ -2,14 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 import { getCars, getMoreCars } from 'store/thunkCars/thunkCars';
 const carsSlice = createSlice({
     name: 'cars',
-    initialState: {items: [], error: '', loading: false, limit: 8},
+    initialState: {items: [], error: '', loading: false, },
     extraReducers: builder => {
       builder
         .addCase(getCars.fulfilled, (state, { payload }) => {
           return { ...state, items: payload};
         }).addCase(getMoreCars.fulfilled, (state, { payload }) => {
-          state.limit = state.limit + 4;
         state.items = [...state.items, ...payload];
+        
         }).addMatcher(
             action => action.type.endsWith('pending'),
             state => {
