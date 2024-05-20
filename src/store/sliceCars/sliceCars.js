@@ -3,14 +3,17 @@ import { getCars, getMoreCars } from 'store/thunkCars/thunkCars';
 import { getFilterCars } from 'store/thunkCars/thunkFilterCars';
 const carsSlice = createSlice({
     name: 'cars',
-    initialState: {items: [], error: '', loading: false, },
+    initialState: {items: [], error: '', loading: false, isShow: false },
     extraReducers: builder => {
       builder.addCase(getFilterCars.fulfilled, (state, {payload}) => {
         state.items = payload;
+        state.isShow = true;
       })
         .addCase(getCars.fulfilled, (state, { payload }) => {
-          return { ...state, items: payload};
+      
+          return { ...state, items: payload, isShow: false};
         }).addCase(getMoreCars.fulfilled, (state, { payload }) => {
+          state.isShow = false;
         state.items = [...state.items, ...payload];
         
         }).addMatcher(
