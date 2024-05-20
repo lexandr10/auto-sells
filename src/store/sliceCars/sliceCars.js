@@ -1,10 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getCars, getMoreCars } from 'store/thunkCars/thunkCars';
+import { getFilterCars } from 'store/thunkCars/thunkFilterCars';
 const carsSlice = createSlice({
     name: 'cars',
     initialState: {items: [], error: '', loading: false, },
     extraReducers: builder => {
-      builder
+      builder.addCase(getFilterCars.fulfilled, (state, {payload}) => {
+        state.items = payload;
+      })
         .addCase(getCars.fulfilled, (state, { payload }) => {
           return { ...state, items: payload};
         }).addCase(getMoreCars.fulfilled, (state, { payload }) => {
@@ -32,6 +35,7 @@ const carsSlice = createSlice({
             }
           )
     },
+    
 
 
 })

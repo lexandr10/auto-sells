@@ -19,11 +19,15 @@ const handlerLoadMore = () => {
   
 }
     return (
+      <>
+      {cars.length === 0 ? <h2 className={css.titleNotFound}>Sorry, nothing was found for your request.</h2> :
       <ul className={css.listCarsItems}>
-        {cars.length > 0 && cars.map((car) => <ItemCar car={car}
-        gallery={car.gallery} details={car.details} reviews={car.reviews} price={car.price} rating={car.rating} location={car.location} description={car.description} id={car._id} name={car.name}/> )}
-          {hasMoreItems  && <button className={css.btnLoadMore} onClick={handlerLoadMore} type="button">Load more...</button>}
-        </ul>
+      {cars.map((car) => <ItemCar car={car}
+      gallery={car.gallery} details={car.details} reviews={car.reviews} price={car.price} rating={car.rating} location={car.location} description={car.description} id={car._id} name={car.name}/> )}
+        {hasMoreItems  && <button className={css.btnLoadMore} onClick={handlerLoadMore} type="button">Load more...</button>}
+      </ul>}
+      </>
+      
     );
   };
   export default ListCar;

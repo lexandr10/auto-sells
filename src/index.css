@@ -23,7 +23,7 @@ code {
 }
 body::-webkit-scrollbar {
   width: 8px;
-height: 264px;
+height: 8px;
 }
 
 body::-webkit-scrollbar-track {
@@ -34,4 +34,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #D9D9D9; 
   border-radius: 7px; 
   
+}
+.container {
+  padding: 64px;
 }

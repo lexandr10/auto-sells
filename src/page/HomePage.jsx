@@ -11,11 +11,13 @@ const HomePage = () => {
     const loading = useSelector(selectorLoader);
     return <>
     {loading && <Loader/>}
-    <ListCar/>
+    <div style={{display: "flex", gap: "64px"}}>
+        <FilterForm/> 
+        <ListCar/>
+    </div>
     <Suspense>
         <Outlet/>
     </Suspense>
-    <FilterForm/>
     </>
     
 }
